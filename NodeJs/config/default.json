@@ -1,8 +1,5 @@
 {
   "KnowSources": [
-    // "DeviceName" : "Secret"
-    {"source": "SCA_rVYGiME5tYrf", "secret": "GBZBWGPTX"},
-    {"source":"SWS_1MNP43QQU26L", "secret": ":j{6CD3A"},
-    {"source":"SWS_O161MLS333SR", "secret": "uwcFE4L5"}
+    // {"source": "SCA_rVYGiME5tYrf", "secret": "GBZBWGPTX"}
   ]
 }

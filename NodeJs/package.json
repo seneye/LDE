@@ -11,7 +11,8 @@
     "http": "*", 
     "crypto-js": "^3.1.9-1",
     "nodejs-websocket": "latest",
-    "ag-grid": "7.2.x" 
+    "ag-grid": "7.2.x",
+    "colors": "latest"
   },
   "devDependencies": {
     "gulp": "latest",
@@ -27,6 +28,10 @@
     "@types/ag-grid": "latest"
   },
   "scripts": {
-    "start": "node node_modules/http-server/bin/http-server -o"
+    "start": "node server/server.js | node node_modules/http-server/bin/http-server -p7979 client -o -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seneye/LDE.git"
   }
 }
