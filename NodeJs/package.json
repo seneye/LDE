@@ -1,0 +1,32 @@
+{
+  "name": "@seneye/lde_demo",
+  "version": "1.0.0",
+  "description": "Seneye Local Exchange Demo",
+  "main": "app.js",
+  "author": {
+    "name": "Seneye-Luca"
+  },
+  "dependencies": {
+    "config": "latest",
+    "http": "*", 
+    "crypto-js": "^3.1.9-1",
+    "nodejs-websocket": "latest",
+    "ag-grid": "7.2.x" 
+  },
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-less": "latest",
+    "gulp-typescript": "latest",
+    "gulp-sourcemaps": "latest",
+    "merge2": "latest",
+    "del": "latest", 
+    "typescript": "latest",
+    "http-server": "latest",
+    "@types/jquery": "latest",
+    "@types/node": "latest",
+    "@types/ag-grid": "latest"
+  },
+  "scripts": {
+    "start": "node node_modules/http-server/bin/http-server -o"
+  }
+}

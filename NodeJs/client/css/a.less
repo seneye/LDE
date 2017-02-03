@@ -1,0 +1,169 @@
+@import "variables.less";
+@import "grid.less";
+
+@font-face {
+  font-family: 'Seneye';
+  src: ~"url('@{seneye-font-path}@{seneye-font-name}.eot')";
+  src: ~"url('@{seneye-font-path}@{seneye-font-name}.eot?#iefix') format('embedded-opentype')",
+       ~"url('@{seneye-font-path}@{seneye-font-name}.woff') format('woff')",
+       ~"url('@{seneye-font-path}@{seneye-font-name}.ttf') format('truetype')",
+       ~"url('@{seneye-font-path}@{seneye-font-name}.svg#glyphicons-halflingsregular') format('svg')";
+}
+
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+ 
+*,
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+ 
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  height:100%;
+  width: 100%;
+
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+body {
+    
+  padding-top: @logo-size-h * 1.15;
+  
+  @media (max-width: @screen-xs-max) {
+      padding-top: @logo-size-h*(0.75+0.08);
+  }
+ 
+
+    height:100%;
+    width: 100%;
+
+    font-family: @font-family-base;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    color: @text-color;
+    background-color: @body-bg;
+
+    // Remove zoome from wp8
+    -ms-touch-action: pan-x pan-y;
+    touch-action: pan-x pan-y;
+    margin: 0;
+}
+
+
+.nft {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+  top: 0;
+  border-top: @topborder-size solid @topborder-color;
+  background: @body-bg;
+   @media (max-width: @screen-xs-max) {
+        border-top: @topborder-size * 0.75 solid @topborder-color;
+    }
+} 
+.nft .container
+{
+   margin-top: -@topborder-size;
+   @media (max-width: @screen-xs-max) {
+        margin-top: -@topborder-size*0.75;
+    }
+} 
+ 
+.VBr
+{
+    position:relative;
+}
+#Vt {
+    position: absolute;  
+    left: @logo-size-w * 1.15;
+    height: @logo-size-h;
+
+     @media (max-width: @screen-xs-max) {
+        left:  @logo-size-w*0.78;
+        height: @logo-size-h*0.75;
+    }
+    right: 0;
+    top: 0;
+}
+
+#Vt h1 {
+    white-space: nowrap;
+    width: 100%;                   
+    overflow: hidden;      
+    text-overflow:    ellipsis;
+}
+#tlbl
+{
+    position: absolute;  
+    bottom: 0px;
+    left:0px;
+
+    font-family: Seneye;
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+}
+//logo
+#Vc{
+    width:  @logo-size-w;
+    height: @logo-size-h;
+     @media (max-width: @screen-xs-max) {
+        width:  @logo-size-w*0.75;
+        height: @logo-size-h*0.75;
+    }
+}
+#Vc.s1{
+    background: @logo-connected-bg;
+}
+#Vc.s2{
+    background: @logo-connecting-bg;
+}
+#Vc.s3{
+    background: @logo-notconnected-bg;
+}
+#Vc.s1 svg .w,#Vc.s3 svg .w
+{
+    fill: #ffffff;
+}
+#Vc.s2 svg .w
+{
+    fill: #000000;
+ 
+        -moz-animation: blink 1s steps(5, start) infinite; 
+        -o-animation: blink 1s steps(5, start) infinite;
+        -webkit-animation: blink 1s steps(5, start) infinite;
+        animation: blink 1s steps(5, start) infinite;
+    }
+@-moz-keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+#Vb
+{
+    height: 100%;
+}

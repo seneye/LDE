@@ -1,0 +1,34 @@
+.container {
+    position:relative;
+  .container-fixed();
+
+  @media (min-width: @screen-sm) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+
+.container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
+  .clearfix();
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+} 

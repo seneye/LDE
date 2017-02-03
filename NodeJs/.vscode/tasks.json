@@ -1,0 +1,19 @@
+{
+    "version": "0.1.0",
+    "command": "node",
+    "windows": {
+        "command": "node.exe"
+    },
+    "isShellCommand": true,
+    "tasks": [
+        {
+            "taskName": "build-debug",
+            "args": ["${workspaceRoot}/node_modules/gulp/bin/gulp.js", "build-debug" , "build-less"],
+            "isBuildCommand": true,
+            "suppressTaskName": true, 
+            "problemMatcher": [
+                "$tsc"
+            ]
+        } 
+    ]
+}
