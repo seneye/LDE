@@ -1,6 +1,6 @@
 {
   "name": "@seneye/lde_demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Seneye Local Exchange Demo",
   "main": "app.js",
   "author": {

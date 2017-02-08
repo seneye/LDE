@@ -8,7 +8,7 @@ The message from the device is digitaly signed, you need to edit the config file
 
 ```json
 {
-  "KnowSources": [
+  "KnownSources": [
     {"source": "SCA_rVYGiME5tYrf", "secret": "FGQEEESSA"},
     {"source": "SWS_rVYGiME5tYrf", "secret": "FGQEEESSA"},
 

@@ -17,7 +17,7 @@ function AddNewData(data) {
         conn.sendText(JSON.stringify(Data));
     });
 }
-var KnowSources = config.get('KnowSources');
+var KnownSources = config.get('KnownSources');
 var port = 7878;
 http.createServer(function (req, res) {
     if (req.method == 'POST' && req.url == '/localexchange/endpoint' && req.headers["content-type"] == "application/jose") {
@@ -26,7 +26,7 @@ http.createServer(function (req, res) {
             res.end();
             return;
         }
-        let currSource = KnowSources.find(o => o.source == req.headers["x-seneye"]);
+        let currSource = KnownSources.find(o => o.source == req.headers["x-seneye"]);
         if (!currSource) {
             res.writeHead(404);
             res.end();
@@ -66,8 +66,7 @@ http.createServer(function (req, res) {
         res.writeHead(404);
         res.end();
     }
-})
-    .listen(port, '0.0.0.0', function () {
+}).listen(port, '0.0.0.0', function () {
     var canonicalHost = '127.0.0.1', protocol = 'http://';
     console.info('Starting up Local API Server, serving :\r\n'.red);
     Object.keys(ifaces).forEach(function (dev) {
