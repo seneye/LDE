@@ -41,6 +41,7 @@ http.createServer(function (req, res) {
         } 
         let currSource = KnownSources.find(o=>o.source == req.headers["x-seneye"]); 
         if (!currSource) {
+            console.info('->> !! Request from a unknown device ' + req.headers["x-seneye"].red);
             res.writeHead(404);
             res.end();
             return;
@@ -69,6 +70,10 @@ http.createServer(function (req, res) {
                         var d = JSON.parse(buf.toString()); 
                         AddNewData(d.SUD); 
                     } 
+                    else
+                    {
+                        console.info('->> !! Check the secret for ' + req.headers["x-seneye"].red + ': signature do not match');
+                    }
                 }
             } 
             if (isValid) {
