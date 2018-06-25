@@ -154,7 +154,7 @@ Use these links for help locating your SWS or SCA ID:
 
 Secret keys are located in the Settings panel of your SWS/SCA GUI.
 
-**If you cannot locate your ID or secret key please contact [seneye support](mailto:seneye@support.com).**
+**If you cannot locate your ID or secret key please contact [seneye support](mailto:support@seneye.com).**
 
 *NOTE - a single seneye Connect Application (SCA) can operate with multiple SUDs and their data will be signed using the same ID and secret key.*
 
